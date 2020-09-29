@@ -1,0 +1,7 @@
+{
+  "name": "ZilliqaWallet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
