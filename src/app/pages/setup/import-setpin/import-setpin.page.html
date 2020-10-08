@@ -1,0 +1,32 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-button routerLink="/getting-started" id="backButton"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <h1>Wallet PIN</h1>
+    <p>Please enter a 6 digit PIN to safely lock and encrypt your wallet.</p>
+    <div id="keypadContainer">
+      <div id="keypad">
+        <div>
+          <ion-button (click)="setPin('1')">1</ion-button>
+          <ion-button (click)="setPin('2')">2</ion-button>
+          <ion-button (click)="setPin('3')">3</ion-button>
+        </div>
+        <div>
+          <ion-button (click)="setPin('4')">4</ion-button>
+          <ion-button (click)="setPin('5')">5</ion-button>
+          <ion-button (click)="setPin('6')">6</ion-button>
+        </div>
+        <div>
+          <ion-button (click)="setPin('7')">7</ion-button>
+          <ion-button (click)="setPin('8')">8</ion-button>
+          <ion-button (click)="setPin('9')">9</ion-button>
+        </div>
+      </div>
+    </div>
+    <ion-button (click)="savePin()" id="{{checkPinValidity() ? 'validPin': 'unvalidPin'}}">set pin: {{ selectedPin }}</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,88 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'raleway';
+    src: url('assets/fonts/raleway.ttf') format('truetype'),
+}
+
+body {
+    --ion-background-color: #8BDCDA !important;
+    font-family: "raleway";
+}
+
+h1 {
+    font-family: "raleway";
+    font-weight: bold;
+}
+
+p {
+    font-family: "raleway";
+    font-weight: 500;
+}
+
+ion-toolbar {
+    --background: transparent !important;
+}
+
+ion-title {
+    text-align: center;
+}
+
+ion-header::after {
+    background-image: none !important;
+}
+
+ion-button {
+    --border-radius: 30px !important;
+    --background: #BFE9E8;
+    --color: #49C1BF;
+    height: 60px;
+    font-family: "raleway";
+    font-weight: bold;
+}
+
+ion-button{
+    --box-shadow:none;
+}
+
+.alert-wrapper {
+    --background: white;
+}
+
+.alert-wrapper .alert-head h2 {
+    color: black;
+}
+
+ion-content {
+    --color: white;
+}
+
+ion-item {
+    --highlight-color-valid: transparent !important;
+    --highlight-color-invalid: transparent !important;
+  }

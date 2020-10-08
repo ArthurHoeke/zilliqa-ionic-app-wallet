@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <h1>Zilliqa Balance</h1>
+      <span><img src="/assets/icon/logo.png" alt="Logo" id="logo"> <p>{{balance}}</p></span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div id="menuButtons">
+      <ion-button (click)="openSettings()"><ion-icon name="settings-outline"></ion-icon>Settings</ion-button>
+      <ion-button (click)="updateWalletData()"><ion-icon name="refresh-outline" class="{{updateData ? 'rotate': ''}}"></ion-icon>Refresh</ion-button>
+    </div>
+    <div id="transactionButtonsContainer" class="{{expandReceiveBox ? 'expandBox': ''}} {{expandTransactionBox ? 'expandTransactionBox': ''}} {{processingTransaction ? 'expandLoadingBox': ''}}">
+      <div id="buttonContainer">
+        <ion-button (click)="openSend()" *ngIf="expandReceiveBox == false && expandTransactionBox == false">Send</ion-button>
+        <ion-button (click)="openReceive()" *ngIf="expandReceiveBox == false && expandTransactionBox == false">Receive</ion-button>
+
+        <ion-button (click)="closeAction()" *ngIf="expandReceiveBox == true || expandTransactionBox == true">Back</ion-button>
+        <ion-button (click)="confirmTransaction()" *ngIf="expandTransactionBox == true">Confirm</ion-button>
+      </div>
+    </div>
+    <div id="transactionHistory">
+      <h2>Recent transactions</h2>
+      <div *ngFor="let transaction of transactionHistory" class="transactionContainer">
+        <div>
+          <div class="transactionIcon">
+            <ion-icon name="add-outline" *ngIf="transaction.direction == 'in'"></ion-icon>
+            <ion-icon name="remove-outline" *ngIf="transaction.direction == 'out'"></ion-icon>
+          </div>
+          <div class="transactionSummary">
+            <p *ngIf="transaction.direction == 'in'">{{ transaction.from | slice:0:10}}...{{ transaction.from | slice:31:42}}</p>
+            <p *ngIf="transaction.direction == 'out'">{{ transaction.to | slice:0:10}}...{{ transaction.to | slice:31:42}}</p>
+            <small>{{convertTimestamp(transaction.timestamp)}}</small>
+          </div>
+        </div>
+        <p *ngIf="transaction.direction == 'in'">+{{ convertQa(transaction.value) }}</p>
+        <p *ngIf="transaction.direction == 'out'">-{{ convertQa(transaction.value) }}</p>
+      </div>
+    </div>
+    <div id="receiveContainer" class="{{expandReceiveBox ? 'fadeIn': 'fadeOut'}}">
+      <div id="addressForm">
+        <p>Your address</p>
+        <ion-item (click)="copyAddress()">
+          <ion-input>{{walletAddress}}</ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div id="sendContainer" class="{{expandTransactionBox ? 'fadeIn': 'fadeOut'}}">
+      <span><img src="/assets/icon/logo.png" alt="Logo" id="logo"> <p>{{sendAmount}} zil</p></span>
+      <p>New balance: {{ newBalance | number }}</p>
+      <div id="sendAmounts">
+        <ion-button (click)="increaseSend(100)">100</ion-button>
+        <ion-button (click)="increaseSend(1000)">1000</ion-button>
+        <ion-button (click)="setCustomSend()">...</ion-button>
+      </div>
+      <div id="addressForm">
+        <p>Send to address</p>
+        <ion-item>
+          <ion-input [(ngModel)]="sendAddress"></ion-input>
+        </ion-item>
+      </div>
+    </div>
+    <div id="loadingTransaction" class="{{processingTransaction ? 'fadeIn': 'fadeOut'}}">
+      <ion-spinner></ion-spinner>`
+      <p>Processing transaction..</p>
+      <small>Confirmation may take a minute</small>
+    </div>
+  </div>
+</ion-content>

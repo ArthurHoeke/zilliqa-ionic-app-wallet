@@ -1,0 +1,16 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-button routerLink="/getting-started" id="backButton"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <h1>Import wallet</h1>
+    <p>To import your wallet please enter the private key below.</p>
+    <ion-item>
+      <ion-input [(ngModel)]="privkey" placeholder="private key"></ion-input>
+    </ion-item>
+    <ion-button (click)="checkPrivateKey()">Continue</ion-button>
+  </div>
+</ion-content>

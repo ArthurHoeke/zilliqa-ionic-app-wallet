@@ -1,0 +1,31 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <h1>Login</h1>
+    <p>Please enter your wallet PIN to login on your account.</p>
+    <div id="keypadContainer">
+      <div id="keypad">
+        <div>
+          <ion-button (click)="setPin('1')">1</ion-button>
+          <ion-button (click)="setPin('2')">2</ion-button>
+          <ion-button (click)="setPin('3')">3</ion-button>
+        </div>
+        <div>
+          <ion-button (click)="setPin('4')">4</ion-button>
+          <ion-button (click)="setPin('5')">5</ion-button>
+          <ion-button (click)="setPin('6')">6</ion-button>
+        </div>
+        <div>
+          <ion-button (click)="setPin('7')">7</ion-button>
+          <ion-button (click)="setPin('8')">8</ion-button>
+          <ion-button (click)="setPin('9')">9</ion-button>
+        </div>
+      </div>
+    </div>
+    <ion-button (click)="savePin()" id="{{checkPinValidity() ? 'validPin': 'unvalidPin'}}">Login with PIN: {{ selectedPin }}</ion-button>
+  </div>
+</ion-content>

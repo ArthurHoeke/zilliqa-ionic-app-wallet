@@ -1,0 +1,11 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-button (click)="openHome()" id="backButton"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <h1>Wallet settings</h1>
+    <ion-button id="copyButton" (click)="copyPrivateKey()">Copy Private Key</ion-button>
+  </div>
+</ion-content>
