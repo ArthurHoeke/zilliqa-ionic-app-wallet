@@ -1,0 +1,72 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#logo {
+    width:200px;
+    margin-top: 75px;
+}
+
+span {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+span b {
+    color: #49C1BF;
+}
+
+ion-button {
+    margin-top: 15px;
+}
+
+#backButton {
+    width: 45px;
+    height: 45px;
+    font-size: 13px;
+    --border-radius: 15px !important;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#backButton ion-icon {
+    color: #49C1BF;
+}
+
+#keypadContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+#keypad {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#keypad > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#keypad > div > ion-button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    --border-radius: 20px !important;
+}
+
+#validPin {
+    --background: #49C1BF;
+    color: white;
+}

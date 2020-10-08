@@ -1,0 +1,15 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <h1>Your wallet has been created!</h1>
+    <p>It is highly recommended to save a copy of your private key in case you lose your phone or data corrupts.</p>
+    <p>Zilliqa Wallet is not responsible for any loss of funds and does NOT save your wallet credentials.</p>
+    <p>Zilliqa Wallet is unable to recover wallets in case of loss.</p>
+    <ion-button id="copyButton" (click)="copyPrivateKey()">Copy Private Key</ion-button>
+    <ion-button (click)="openHome()">Continue to wallet</ion-button>
+  </div>
+</ion-content>

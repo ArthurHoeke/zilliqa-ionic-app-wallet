@@ -24,3 +24,65 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 'raleway';
+    src: url('assets/fonts/raleway.ttf') format('truetype'),
+}
+
+body {
+    --ion-background-color: #8BDCDA !important;
+    font-family: "raleway";
+}
+
+h1 {
+    font-family: "raleway";
+    font-weight: bold;
+}
+
+p {
+    font-family: "raleway";
+    font-weight: 500;
+}
+
+ion-toolbar {
+    --background: transparent !important;
+}
+
+ion-title {
+    text-align: center;
+}
+
+ion-header::after {
+    background-image: none !important;
+}
+
+ion-button {
+    --border-radius: 30px !important;
+    --background: #BFE9E8;
+    --color: #49C1BF;
+    height: 60px;
+    font-family: "raleway";
+    font-weight: bold;
+}
+
+ion-button{
+    --box-shadow:none;
+}
+
+.alert-wrapper {
+    --background: white;
+}
+
+.alert-wrapper .alert-head h2 {
+    color: black;
+}
+
+ion-content {
+    --color: white;
+}
+
+ion-item {
+    --highlight-color-valid: transparent !important;
+    --highlight-color-invalid: transparent !important;
+  }

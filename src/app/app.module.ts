@@ -9,6 +9,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
+import { Clipboard } from '@ionic-native/clipboard/ngx';
+import { HTTP } from '@ionic-native/http/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -16,6 +22,11 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
+    Clipboard,
+    HTTP,
+    Vibration,
+    AndroidPermissions,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

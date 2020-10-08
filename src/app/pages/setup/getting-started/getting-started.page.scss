@@ -1,0 +1,24 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+#logo {
+    width:200px;
+    margin-top: 75px;
+}
+
+span {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+span b {
+    color: #49C1BF;
+}
+
+ion-button {
+    margin-top: 15px;
+}
