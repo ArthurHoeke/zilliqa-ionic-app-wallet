@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n<ion-content [fullscreen]=\"true\">\n  <ion-header>\n    <ion-toolbar>\n    </ion-toolbar>\n  </ion-header>\n  <div id=\"container\">\n    <h1>Your wallet has been created!</h1>\n    <p>It is highly recommended to save a copy of your private key in case you lose your phone or data corrupts.</p>\n    <p>Zilliqa Wallet is not responsible for any loss of funds and does NOT save your wallet credentials.</p>\n    <p>Zilliqa Wallet is unable to recover wallets in case of loss.</p>\n    <ion-button id=\"copyButton\" (click)=\"copyPrivateKey()\">Copy Private Key</ion-button>\n    <ion-button (click)=\"openHome()\">Continue to wallet</ion-button>\n  </div>\n</ion-content>\n";
+      __webpack_exports__["default"] = "\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header>\r\n    <ion-toolbar>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div id=\"container\">\r\n    <h1>Your wallet has been created!</h1>\r\n    <p>It is highly recommended to save a copy of your private key in case you lose your phone or data corrupts.</p>\r\n    <p>Zilliqa Wallet is not responsible for any loss of funds and does NOT save your wallet credentials.</p>\r\n    <p>Zilliqa Wallet is unable to recover wallets in case of loss.</p>\r\n    <ion-button id=\"copyButton\" (click)=\"copyPrivateKey()\">Copy Private Key</ion-button>\r\n    <ion-button (click)=\"openHome()\">Continue to wallet</ion-button>\r\n  </div>\r\n</ion-content>\r\n";
       /***/
     },
 

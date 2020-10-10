@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>\n        <img src=\"/assets/icon/logo.png\" alt=\"Logo\" id=\"logo\">\n      </ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <div id=\"container\">\n    <h1>Getting started</h1>\n    <p>Zilliqa Wallet is a free open-source community managed app designed for safe storage of your Zilliqa tokens.</p>\n    <ion-button routerLink=\"/account-setup\">Create wallet</ion-button>\n    <span routerLink=\"/import-privkey\">Already have a wallet? <b>Import</b></span>\n  </div>\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\">\r\n  <ion-header>\r\n    <ion-toolbar>\r\n      <ion-title>\r\n        <img src=\"/assets/icon/logo.png\" alt=\"Logo\" id=\"logo\">\r\n      </ion-title>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div id=\"container\">\r\n    <h1>Getting started</h1>\r\n    <p>Zilliqa Wallet is a free open-source community managed app designed for safe storage of your Zilliqa tokens.</p>\r\n    <ion-button routerLink=\"/account-setup\">Create wallet</ion-button>\r\n    <span routerLink=\"/import-privkey\">Already have a wallet? <b>Import</b></span>\r\n  </div>\r\n</ion-content>\r\n";
       /***/
     },
 

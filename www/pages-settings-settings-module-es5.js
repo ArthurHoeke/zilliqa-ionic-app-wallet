@@ -22,7 +22,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-button (click)=\"openHome()\" id=\"backButton\"><ion-icon name=\"chevron-back-outline\"></ion-icon></ion-button>\n    </ion-toolbar>\n  </ion-header>\n  <div id=\"container\">\n    <h1>Wallet settings</h1>\n    <ion-button id=\"copyButton\" (click)=\"copyPrivateKey()\">Copy Private Key</ion-button>\n  </div>\n</ion-content>\n";
+      __webpack_exports__["default"] = "<ion-content [fullscreen]=\"true\">\r\n  <ion-header>\r\n    <ion-toolbar>\r\n      <ion-button (click)=\"openHome()\" id=\"backButton\"><ion-icon name=\"chevron-back-outline\"></ion-icon></ion-button>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div id=\"container\">\r\n    <h1>Wallet settings</h1>\r\n    <ion-button id=\"copyButton\" (click)=\"copyPrivateKey()\">Copy Private Key</ion-button>\r\n  </div>\r\n</ion-content>\r\n";
       /***/
     },
 

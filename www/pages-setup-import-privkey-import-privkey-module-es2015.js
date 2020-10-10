@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-content [fullscreen]=\"true\">\n  <ion-header>\n    <ion-toolbar>\n      <ion-button routerLink=\"/getting-started\" id=\"backButton\"><ion-icon name=\"chevron-back-outline\"></ion-icon></ion-button>\n    </ion-toolbar>\n  </ion-header>\n  <div id=\"container\">\n    <h1>Import wallet</h1>\n    <p>To import your wallet please enter the private key below.</p>\n    <ion-item>\n      <ion-input [(ngModel)]=\"privkey\" placeholder=\"private key\"></ion-input>\n    </ion-item>\n    <ion-button (click)=\"checkPrivateKey()\">Continue</ion-button>\n  </div>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-content [fullscreen]=\"true\">\r\n  <ion-header>\r\n    <ion-toolbar>\r\n      <ion-button routerLink=\"/getting-started\" id=\"backButton\"><ion-icon name=\"chevron-back-outline\"></ion-icon></ion-button>\r\n    </ion-toolbar>\r\n  </ion-header>\r\n  <div id=\"container\">\r\n    <h1>Import wallet</h1>\r\n    <p>To import your wallet please enter the private key below.</p>\r\n    <ion-item>\r\n      <ion-input [(ngModel)]=\"privkey\" placeholder=\"private key\"></ion-input>\r\n    </ion-item>\r\n    <ion-button (click)=\"checkPrivateKey()\">Continue</ion-button>\r\n  </div>\r\n</ion-content>\r\n");
 
 /***/ }),
 

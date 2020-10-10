@@ -38,6 +38,11 @@ export class HomePage {
 
   transactionHistory;
 
+  transactionFee = 0.002;
+  defaultTransactionFee = 0.002;
+  fastTransactionFee = 0.003;
+  customFee = 0;
+
   updateData: boolean = false;
   
   constructor(private vibration: Vibration, public platform: Platform, private activatedRoute: ActivatedRoute, public alertController: AlertController, private clipboard: Clipboard, private route: Router) {
@@ -106,7 +111,7 @@ export class HomePage {
               version: 65537,
               toAddr: this.sendAddress,
               amount: new BN(units.toQa(this.sendAmount, units.Units.Zil)),
-              gasPrice: gasPrice,
+              gasPrice: this.transactionFee,
               gasLimit: Long.fromNumber(1),
             }, false)
         ).then((response) => {
@@ -194,8 +199,56 @@ export class HomePage {
     this.vibration.vibrate(100);
   }
 
-  setCustomSend() {
-    this.showCustomAmountPopup("Custom amount", "Enter the amount of ZIL you want to sent");
+  setTransactionFee(amount) {
+    this.transactionFee = amount;
+  }
+
+  getSelectedFee(amount) {
+    if(this.transactionFee == amount) {
+      return "selectedFee";
+    }
+  }
+
+  getCustomFeeString() {
+    if(this.transactionFee != this.defaultTransactionFee && this.transactionFee != this.fastTransactionFee) {
+      return this.transactionFee + " ZIL";
+    } else {
+      return "..."
+    }
+  }
+
+  setTransactionAmount() {
+    this.showCustomAmountPopup("ZIL amount", "Enter the amount of ZIL you want to sent");
+  }
+
+  async showCustomTransactionFeePopup(head, message) {
+    const alert = await this.alertController.create({
+      header: head,
+      message: message,
+      inputs: [
+        {
+          name: 'amount',
+          type: 'number'
+        }
+      ],
+      buttons: [
+        {
+          text: 'Cancel'
+        },
+        {
+          text: 'Set',
+          handler: (alertData) => {
+            this.transactionFee = alertData.amount;
+            this.customFee = alertData.amount;
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
+  setCustomTransactionFee() {
+    this.showCustomTransactionFeePopup("Custom fee", "Enter the amount of transaction fee you want to set");
   }
 
   calculateNewBalance() {
@@ -203,12 +256,21 @@ export class HomePage {
   }
 
   openSend() {
-    this.expandTransactionBox = !this.expandTransactionBox;
-    this.vibration.vibrate(100);
+    if(!this.processingTransaction) {
+      this.expandTransactionBox = !this.expandTransactionBox;
+      this.vibration.vibrate(100);
+    } else {
+      this.vibration.vibrate([100, 200, 100]);
+    }
   }
 
   openReceive() {
-    this.expandReceiveBox = !this.expandReceiveBox;
+    if(!this.processingTransaction) {
+      this.expandReceiveBox = !this.expandReceiveBox;
+      this.vibration.vibrate(100);
+    } else {
+      this.vibration.vibrate([100, 200, 100]);
+    }
     this.vibration.vibrate(100);
   }
 

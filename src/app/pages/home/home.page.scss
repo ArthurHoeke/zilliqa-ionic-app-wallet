@@ -184,19 +184,28 @@ ion-title {
 #sendContainer #sendAmounts {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin-top: 5px;
   margin-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 #sendContainer #sendAmounts > ion-button {
-  height: 40px;
+  height: 50px;
+}
+
+#sendContainer #sendAmounts > ion-button#selectedFee {
+  --background: #49C1BF;
+  color: white;
 }
 
 #sendContainer span p {
   font-weight: bold;
   font-size: 35px;
   color: #8BDCDA;
+  border-bottom: 3px solid;
+  padding-bottom: 9px;
 }
 
 #sendContainer span img {
@@ -226,6 +235,16 @@ ion-title {
   margin-right: 30px;
   animation: barFadeIn .3s ease forwards;
   animation-delay: .1s;
+}
+#sendContainer #transactionFeeContainer {
+  width: 100%;
+  margin-top: 25px;
+}
+
+#sendContainer #transactionFeeContainer > p {
+  color: #49C1BF;
+  font-weight: bold;
+  margin-left: 60px;
 }
 
 #receiveContainer {
@@ -301,7 +320,7 @@ ion-title {
 }
 
 .expandTransactionBox {
-  height: 365px !important;
+  height: 415px !important;
 }
 
 .expandLoadingBox {

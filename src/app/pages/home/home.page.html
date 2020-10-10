@@ -49,12 +49,15 @@
       </div>
     </div>
     <div id="sendContainer" class="{{expandTransactionBox ? 'fadeIn': 'fadeOut'}}">
-      <span><img src="/assets/icon/logo.png" alt="Logo" id="logo"> <p>{{sendAmount}} zil</p></span>
+      <span (click)="setTransactionAmount()"><img src="/assets/icon/logo.png" alt="Logo" id="logo"> <p>{{sendAmount}} zil</p></span>
       <p>New balance: {{ newBalance | number }}</p>
-      <div id="sendAmounts">
-        <ion-button (click)="increaseSend(100)">100</ion-button>
-        <ion-button (click)="increaseSend(1000)">1000</ion-button>
-        <ion-button (click)="setCustomSend()">...</ion-button>
+      <div id="transactionFeeContainer">
+        <p>Transaction fee</p>
+        <div id="sendAmounts">
+          <ion-button (click)="setTransactionFee(defaultTransactionFee)" id="{{getSelectedFee(defaultTransactionFee)}}">Default<br>0.002 ZIL</ion-button>
+          <ion-button (click)="setTransactionFee(fastTransactionFee)" id="{{getSelectedFee(fastTransactionFee)}}">Fast<br>0.003 ZIL</ion-button>
+          <ion-button (click)="setCustomTransactionFee()" id="{{getSelectedFee(customFee)}}">{{getCustomFeeString()}}</ion-button>
+        </div>
       </div>
       <div id="addressForm">
         <p>Send to address</p>

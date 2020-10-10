@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.undefinedcompany.zilliqawallet" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.undefinedcompany.zilliqawallet" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Zilliqa Wallet</name>
     <description>Zilliqa Wallet is a free open-source community managed app designed for safe storage of your Zilliqa tokens.</description>
     <author email="arthur.hoeke@gmail.com" href="http://arthurhoeke.nl/">Arthur Hoeke</author>
