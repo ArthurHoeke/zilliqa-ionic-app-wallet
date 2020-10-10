@@ -57,6 +57,7 @@ Currently Zilliqa Wallet provides;
 * [Angular](https://angular.io/)
 * [Zilliqa Javascript library](https://github.com/Zilliqa/Zilliqa-JavaScript-Library/)
 * [Viewblock](https://www.npmjs.com/package/@zilliqa-js/viewblock)
+* [Crypto JS](https://www.npmjs.com/package/crypto-js)
 
 ## Getting Started
 
