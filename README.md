@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ArthurHoeke/zilliqa-ionic-app-wallet">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="/src/assets/icon/logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">zilliqa-ionic-app-wallet</h3>
@@ -56,6 +56,8 @@ Currently Zilliqa Wallet provides;
 * [Ionic](https://ionicframework.com/)
 * [Angular](https://angular.io/)
 * [Zilliqa Javascript library](https://github.com/Zilliqa/Zilliqa-JavaScript-Library/)
+* [Viewblock](https://www.npmjs.com/package/@zilliqa-js/viewblock)
+* [Crypto JS](https://www.npmjs.com/package/crypto-js)
 
 ## Getting Started
 
@@ -75,7 +77,7 @@ git clone https://github.com/ArthurHoeke/zilliqa-ionic-app-wallet.git
 ```sh
 npm install
 ```
-4. Enter your API in `src/app/pages/home/home.page.ts`
+4. Enter your API key in `src/app/pages/home/home.page.ts`
 ```JS
 const apiClient = zilliqaAPI({
   apiKey: 'ENTER YOUR VIEWBLOCK API KEY HERE',
