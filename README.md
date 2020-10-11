@@ -10,7 +10,7 @@
   <p align="center">
     Zilliqa Wallet is a free open-source community managed app designed for safe storage of Zilliqa tokens.
     <br />
-    <a href="https://github.com/ArthurHoeke/zilliqa-ionic-app-wallet/"><strong>Download Zilliqa Wallet on the play store »</strong></a>
+    <a href="https://play.google.com/store/apps/details?id=io.undefinedcompany.zilliqawallet"><strong>Download Zilliqa Wallet on the play store »</strong></a>
     <br />
     <br />
     <a href="https://github.com/ArthurHoeke/zilliqa-ionic-app-wallet/issues">Report Bug</a>
