@@ -128,6 +128,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Arthur Hoeke - [LinkedIn](https://www.linkedin.com/in/arthur-hoeke-170691103/) - arthur.hoeke@gmal.com
+Arthur Hoeke - [LinkedIn](https://www.linkedin.com/in/arthur-hoeke-170691103/) - arthur.hoeke@gmail.com
 
 [product-screenshot]: https://i.imgur.com/j1t2ghI.png
