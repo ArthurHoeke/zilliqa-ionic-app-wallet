@@ -1,8 +1,8 @@
 {
   "name": "ZilliqaWallet",
-  "version": "0.0.1",
-  "author": "Arthur Hoeke",
-  "homepage": "https://arthurhoeke.nl/",
+  "version": "0.0.2",
+  "author": "UndefinedCompany",
+  "homepage": "https://undefinedcompany.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

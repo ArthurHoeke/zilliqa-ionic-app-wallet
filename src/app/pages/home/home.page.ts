@@ -16,7 +16,7 @@ const {
 const zilliqa = new Zilliqa('https://api.zilliqa.com/');
 
 const apiClient = zilliqaAPI({
-  apiKey: 'ENTER YOUR VIEWBLOCK API KEY HERE',
+  apiKey: '905e89d706d250f76783e41817d82af2317742831d330609e7434678d15ce62e',
 })
 
 @Component({
